@@ -1,0 +1,7 @@
+{
+  "name": "video-comparison",
+  "version": "1.0.0",
+  "dependencies": {
+    "jwplayer-mirror": "~6.8.4616"
+  }
+}

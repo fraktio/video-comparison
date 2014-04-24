@@ -1,0 +1,66 @@
+{% extends "layout.html.twig" %}
+
+{% block video_head %}
+    <script type="text/javascript" src="/bower_components/jwplayer-mirror/jwplayer.js"></script>
+    <script type="text/javascript" src="/bower_components/jwplayer-mirror/jwplayer.html5.js"></script>
+{% endblock %}
+
+{% block video_init %}
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            var playa = document.getElementById('playa');
+
+
+            jwplayer(playa).setup({
+                autostart: true,
+                    width: 800,
+                    height: 600,
+                    playlist: [
+                        {
+                            image: '/video/ffb324c2-00db-4d85-aa41-624f8cbc9eb4-480p_mp4_thumbnail.png',
+                            sources: [
+                                {
+                                    file: "/video/ffb324c2-00db-4d85-aa41-624f8cbc9eb4-480p_mp4.mp4",
+                                    'label': "480pM"
+                                },
+                                {
+                                    file: "/video/ffb324c2-00db-4d85-aa41-624f8cbc9eb4-720p_mp4.mp4",
+                                    'label': "720pM"
+                                },
+                                {
+                                    file: "/video/ffb324c2-00db-4d85-aa41-624f8cbc9eb4-1080p_mp4.mp4",
+                                    'label': "1080pM"
+                                },
+                                {
+                                    file: "/video/ffb324c2-00db-4d85-aa41-624f8cbc9eb4-480p_webm.webm",
+                                    'label': "480pW"
+                                },
+                                {
+                                    file: "/video/ffb324c2-00db-4d85-aa41-624f8cbc9eb4-720p_webm.webm",
+                                    'label': "720pW"
+                                },
+                                {
+                                    file: "/video/ffb324c2-00db-4d85-aa41-624f8cbc9eb4-1080p_webm.webm",
+                                    'label': "1080pW"
+                                }
+                            ]
+                        }]
+                    });
+        });
+
+
+    </script>
+
+{% endblock %}
+
+{% block content %}
+
+    <div id="playa"></div>
+
+{% endblock %}
+
+
+

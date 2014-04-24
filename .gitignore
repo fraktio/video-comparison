@@ -1,0 +1,6 @@
+web/php_errors.log
+web/bower_components/
+composer.lock
+vendor
+cache
+.idea
